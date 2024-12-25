@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحكم في الأجهزة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>تحكم في الأجهزة</h1>
+        <div id="device-selection">
+            <button id="select-iphone">اختيار iPhone</button>
+            <button id="select-android">اختيار Android</button>
+        </div>
+        <div id="device-list" style="display:none;">
+            <h2>الأجهزة المتصلة:</h2>
+            <ul id="devices"></ul>
+        </div>
+        <div id="control-panel" style="display:none;">
+            <h2>لوحة التحكم</h2>
+            <label>الصوت:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+            <label>الإضاءة:</label>
+            <input type="range" id="brightness" min="0" max="100" value="50">
+            <button id="mouse-control">التحكم في الماوس</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
